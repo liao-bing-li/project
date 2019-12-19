@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/contact.css">
+		<script src="../jquery-1.11.1.min.js"></script>
+		<script src="../anime.min.js"></script>
+
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 网页头部 -->
+			<div class="header">
+				<div class="head_box">
+					<h2>Cake House</h2>
+					
+					<ul class="nav">
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="#" style="color: #fd5c63;border-bottom:1px solid #fd5c63;">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 网页主体 -->
+			<div class="main">
+				<div class="main_two">
+					<div class="two_center">
+						<h3 class="ml6">
+						  <span class="text-wrapper">
+						    <span class="letters">Contact</span>
+						  </span>
+						</h3>
+						
+						<ul class="two_box">
+							<li>
+								<img src="../img/news/phon.png" alt="">
+								<div class="two_a">
+									<p>Phone</p>
+									<span>+1 (100)222-23-33</span>
+								</div>
+							</li>
+							<li>
+								<img src="../img/news/email.png" alt="">
+								<div class="two_a">
+									<p>Email</p>
+									<span>info@example.com</span>
+								</div>
+							</li>
+							<li>
+								<img src="../img/news/address.png" alt="">
+								<div class="two_a">
+									<p>Address</p>
+									<span>7784 Diamonds street, California, US.</span>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				
+				<div class="main_three">
+					<h3 class="ml10">
+					  <span class="text-wrapper">
+						<span class="letters">Contact form</span>
+					  </span>
+					</h3>
+					
+					<form action="" method="post">
+						<ul>
+							<li>
+								<input  id="name" type="text" name="Name" placeholder="Name" >
+								<div class="need1">这是一个必填项喔</div>
+							</li>
+							<li>
+								<input id="email" type="text" name="Email" placeholder="Email" >
+								<div class="need2">这是一个必填项喔</div>
+							</li>
+							<li>
+								<input id="subject" type="text" name="Subject" placeholder="Subject" >
+								<div class="need3">这是一个必填项喔</div>
+							</li>
+							<li>
+								<textarea id="message" rows="" cols="" placeholder="Message"></textarea>
+								<div class="need4">这是一个必填项喔</div>
+							</li>
+							<p>Send</p>
+						</ul>
+						
+					</form>
+				</div>
+			</div>
+			
+			
+			<!-- 网页尾部 -->
+			<div class="footer">
+				<div class="foot_one">
+					<div class="foot_center">
+						<h3>Get in touch with us</h3>
+						<div class="left">
+							<div class="left_a">
+								<h5>Phone:+1 (100)222-23-33</h5>
+								<h5>Email:info@example.com</h5>
+								<h5>Address:7784 Diamonds street</h5>
+							</div>
+							
+							<ul>
+								<li>
+									<a href=""><img src="../img/index/twitter.png" alt=""></a>
+									<span>Twitter</span>
+								</li>
+								<li>
+									<a href="" ><img src="../img/index/facebook.png" alt=""></a>
+									<span>Facebook</span>
+								</li>
+								<li>
+									<a href=""><img src="../img/index/google.png" alt=""></a>
+									<span>Google +</span>
+								</li>
+								<li>
+									<a href=""><img src="../img/index/dribbble.png" alt=""></a>
+									<span>Dribbble</span>
+								</li>
+							</ul>
+						</div>
+						<div class="right">
+							<h6><img src="../img/index/weixin.png" alt="">
+							<span>微信公众号</span></h6>
+							<h6><img src="../img/index/weixin.png" alt="">
+							<span>微博公众号</span></h6>
+						</div>
+					</div>
+				</div>
+				<div class="foot_two">
+					<ul>
+						<li><a href="about.html">About</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="news.html">News</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$(window).load(function(){
+					$('.main>.main_three>form>ul>li>div').hide(100)
+				})
+				$('.main>.main_three>form>ul>p').click(function(){
+					var res1=$('input#name').val();
+					if(res1==''){
+						$('.main>.main_three>form>ul>li>div.need1').show(100)
+					}else{$('.main>.main_three>form>ul>li>div.need1').hide(100)}
+					var res2=$('input#email').val();
+					if(res2==''){
+						$('.main>.main_three>form>ul>li>div.need2').show(100)
+					}else{$('.main>.main_three>form>ul>li>div.need2').hide(100)}
+					var res3=$('input#subject').val();
+					if(res3==''){
+						$('.main>.main_three>form>ul>li>div.need3').show(100)
+					}else{$('.main>.main_three>form>ul>li>div.need3').hide(100)}
+					var res4=$('textarea#message').val();
+					if(res4==''){
+						$('.main>.main_three>form>ul>li>div.need4').show(100)
+					}else{$('.main>.main_three>form>ul>li>div.need4').hide(100)}
+					console.log(res)
+				})
+			})
+			
+			var textWrapper = document.querySelector('.ml6 .letters');
+			textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+			
+			anime.timeline({loop: true})
+			  .add({
+			    targets: '.ml6 .letter',
+			    translateY: ["1.1em", 0],
+			    translateZ: 0,
+			    duration: 750,
+			    delay: (el, i) => 50 * i
+			  }).add({
+			    targets: '.ml6',
+			    opacity: 0,
+			    duration: 1000,
+			    easing: "easeOutExpo",
+			    delay: 1000
+			  });
+			  
+			  var textWrapper = document.querySelector('.ml10 .letters');
+				textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+				anime.timeline({loop: true})
+				  .add({
+					targets: '.ml10 .letter',
+					rotateY: [-90, 0],
+					duration: 1300,
+					delay: (el, i) => 45 * i
+				  }).add({
+					targets: '.ml10',
+					opacity: 0,
+					duration: 1000,
+					easing: "easeOutExpo",
+					delay: 1000
+				  });
+		</script>
+	</body>
+</html>
